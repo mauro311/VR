@@ -2,12 +2,21 @@ using UnityEngine;
 
 public class ProjectileCollision : MonoBehaviour
 {
-
-    private void OnCollisionEnter(Collision collision)
+    [SerializeField] float destroyInTime;
+    private float currentTime;
+    private void Update()
     {
-        Destroy(collision.gameObject);
+        currentTime += Time.deltaTime;
 
-        Destroy(gameObject);
+        if (currentTime > destroyInTime)
+        {
+            Destroy(gameObject);
+        }
     }
-   
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Destroy(other.gameObject);
+    }
 }

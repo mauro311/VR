@@ -23,7 +23,7 @@ public class VRwepon : MonoBehaviour
         if (fireAction.ReadValue<float>() > 0 && Time.time >= nextFire)
         {
             Shoot();
-            nextFire = Time.time + 1f / fireRate;
+            nextFire = Time.time + 0.5f / fireRate;
         }
     }
 
