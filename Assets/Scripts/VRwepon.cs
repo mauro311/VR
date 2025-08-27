@@ -11,16 +11,19 @@ public class VRwepon : MonoBehaviour
 
 
     [SerializeField] InputAction fireAction;
+    [SerializeField] InputAction firePress;
 
     private void Awake()
     {
         fireAction = new InputAction(type: InputActionType.Button, binding: "<Mouse>/leftButton");
+        firePress = new InputAction(type: InputActionType.Button, binding: "<Touchscreen>/Press");
         fireAction.Enable();
+        firePress.Enable();
     }
 
     private void Update()
     {
-        if (fireAction.ReadValue<float>() > 0 && Time.time >= nextFire)
+        if (firePress.ReadValue<float>() > 0 && Time.time >= nextFire)
         {
             Shoot();
             nextFire = Time.time + 0.5f / fireRate;

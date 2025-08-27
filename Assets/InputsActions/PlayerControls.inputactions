@@ -13,6 +13,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Prees",
+                    "type": "Button",
+                    "id": "f9047752-0a06-43c4-8753-6e888792c87a",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -29,12 +38,12 @@
                 },
                 {
                     "name": "",
-                    "id": "5b31c2d0-b516-418b-aff1-1a2ca3d7a87a",
-                    "path": "",
+                    "id": "b87888aa-0438-45d3-84e0-21623bda6746",
+                    "path": "<Touchscreen>/Press",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Fire",
+                    "action": "Prees",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
